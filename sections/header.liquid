@@ -28,7 +28,7 @@
 <style>
   header-drawer {
     justify-self: start;
-    margin-left: -1.2rem;
+    margin-left: 0;
   }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
@@ -87,7 +87,7 @@
 
 {%- style -%}
   .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    padding: 13px 10px 13px 10px;
   }
 
   .section-header {
