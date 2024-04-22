@@ -186,8 +186,24 @@
                 </p>
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
+                  <div class="desc_grid">
+                    <div>
+                      About
+                    </div>
+                    <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                      {{ product.description }}
+                    </div>
+                  </div>
+                {%- endif -%}
+              {%- when 'specification' -%}
+                {%- if product.metafields.custom.specification != blank -%}
+                  <div class="desc_grid">
+                    <div>
+                      Specification
+                    </div>
+                    <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                      {{ product.metafields.custom.specification | metafield_tag }}
+                    </div>
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}
@@ -970,6 +986,11 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
+      "limit": 1
+    },
+    {
+      "type": "specification",
+      "name": "t:sections.main-product.blocks.specification.name",
       "limit": 1
     },
     {

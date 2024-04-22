@@ -2028,6 +2028,9 @@
         "description": {
           "name": "Description"
         },
+        "specification": {
+          "name": "Specification"
+        },
         "sku": {
           "name": "SKU",
           "settings": {
