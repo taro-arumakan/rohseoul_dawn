@@ -6,32 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <style>
-    @font-face {
-      font-family: "LINE Seed";
-      src: url("{{ 'LINESeedJP_OTF_Rg.woff2' | asset_url }}") format("woff2");
-      font-weight: normal;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: "LINE Seed";
-      src: url("{{ 'LINESeedJP_OTF_Th.woff2' | asset_url }}") format("woff2");
-      font-weight: thin;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: "LINE Seed";
-      src: url("{{ 'LINESeedJP_OTF_Bd.woff2' | asset_url }}") format("woff2");
-      font-weight: bold;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: "LINE Seed";
-      src: url("{{ 'LINESeedJP_OTF_Eb.woff2' | asset_url }}") format("woff2");
-      font-weight: 800;
-      font-style: normal;
-    }
-  </style>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -122,12 +97,12 @@
       }
 
       :root {
-        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+        --font-body-family: "Pretendard", {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
-        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-heading-family:  "Pretendard", {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
