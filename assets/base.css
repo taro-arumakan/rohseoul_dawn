@@ -414,8 +414,9 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 1.3rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
   letter-spacing: 0.04rem;
 }
 
@@ -1589,8 +1590,8 @@ details[open] > .share-button__fallback {
 .select__select {
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight);
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 14px;
   color: rgba(var(--color-foreground), 0.75);
 }
 

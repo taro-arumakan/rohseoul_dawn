@@ -219,7 +219,7 @@
 /* Product info */
 
 .product__info-container > * + * {
-  padding: 1.5rem 0;
+  padding: 5px 0;
 }
 
 variant-selects {
@@ -256,8 +256,11 @@ a.product__text {
 }
 
 .product__title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
   word-break: break-word;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 .product__title > * {
