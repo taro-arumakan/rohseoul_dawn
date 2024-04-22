@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
+    <style>
+    @font-face {
+      font-family: "LINE Seed";
+      src: url("{{ 'LINESeedJP_OTF_Rg.woff2' | asset_url }}") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "LINE Seed";
+      src: url("{{ 'LINESeedJP_OTF_Th.woff2' | asset_url }}") format("woff2");
+      font-weight: thin;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "LINE Seed";
+      src: url("{{ 'LINESeedJP_OTF_Bd.woff2' | asset_url }}") format("woff2");
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "LINE Seed";
+      src: url("{{ 'LINESeedJP_OTF_Eb.woff2' | asset_url }}") format("woff2");
+      font-weight: 800;
+      font-style: normal;
+    }
+  </style>
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
