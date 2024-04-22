@@ -281,6 +281,8 @@ a.product__text {
 
 .product__accordion .accordion__content {
   padding: 0 1rem;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .product .price .badge {

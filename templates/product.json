@@ -48,6 +48,24 @@
           "type": "specification",
           "settings": {
           }
+        },
+        "collapsible_tab_3yMJMp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ block.settings.page.title }}",
+            "icon": "none",
+            "content": "",
+            "page": "product-care"
+          }
+        },
+        "collapsible_tab_9dMkPj": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "{{ block.settings.page.title }}",
+            "icon": "none",
+            "content": "",
+            "page": "shipping-and-returns"
+          }
         }
       },
       "block_order": [
@@ -58,7 +76,9 @@
         "buy_buttons",
         "description",
         "share",
-        "specification_mGWj4M"
+        "specification_mGWj4M",
+        "collapsible_tab_3yMJMp",
+        "collapsible_tab_9dMkPj"
       ],
       "settings": {
         "enable_sticky_info": true,

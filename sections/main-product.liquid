@@ -187,9 +187,7 @@
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product--desc-grid">
-                    <div class="product--desc-grid-heading">
-                      About
-                    </div>
+                    <div class="product--desc-grid-heading">About</div>
                     <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                       {{ product.description }}
                     </div>
@@ -198,9 +196,7 @@
               {%- when 'specification' -%}
                 {%- if product.metafields.custom.specification != blank -%}
                   <div class="product--desc-grid">
-                    <div class="product--desc-grid-heading">
-                      Specification
-                    </div>
+                    <div class="product--desc-grid-heading">Specification</div>
                     <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                       {{ product.metafields.custom.specification | metafield_tag }}
                     </div>
@@ -261,7 +257,6 @@
                   </label>
                   <div class="price-per-item__container">
                     <quantity-input class="quantity" data-url="{{ product.url }}" data-section="{{ section.id }}">
-
                       <button class="quantity__button no-js-hidden" name="minus" type="button">
                         <span class="visually-hidden">
                           {{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}

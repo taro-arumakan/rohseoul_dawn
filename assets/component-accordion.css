@@ -20,10 +20,15 @@
 }
 
 .accordion {
-  margin-top: 2.5rem;
+  /* margin-top: 2.5rem; */
   margin-bottom: 0;
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  /* border-top: 0.1rem solid rgba(var(--color-foreground), 0.08); */
+  border-bottom: solid 2px;
+}
+
+h2.h4.accordion__title.inline-richtext {
+  font-weight: 700;
+  font-size: 12px;
 }
 
 .accordion__title {
