@@ -395,6 +395,19 @@ a.product__text {
   text-align: center;
 }
 
+.product--desc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 1rem;
+  border-bottom: solid 2px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.product--desc-grid-heading {
+  margin-top: calc(2.5rem + 1em);
+}
+
 /* Product media */
 .product__media-list video {
   border-radius: calc(var(--media-radius) - var(--media-border-width));

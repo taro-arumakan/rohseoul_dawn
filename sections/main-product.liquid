@@ -186,8 +186,8 @@
                 </p>
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
-                  <div class="desc_grid">
-                    <div>
+                  <div class="product--desc-grid">
+                    <div class="product--desc-grid-heading">
                       About
                     </div>
                     <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
@@ -197,8 +197,8 @@
                 {%- endif -%}
               {%- when 'specification' -%}
                 {%- if product.metafields.custom.specification != blank -%}
-                  <div class="desc_grid">
-                    <div>
+                  <div class="product--desc-grid">
+                    <div class="product--desc-grid-heading">
                       Specification
                     </div>
                     <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
