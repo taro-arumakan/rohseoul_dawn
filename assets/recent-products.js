@@ -15,21 +15,30 @@ class RecentProductsSection extends HTMLElement {
     var t = this.storage.map((t) => this.renderProductItem(t));
     Promise.allSettled(t).then(() => this.productsLoaded());
   }
-  wrapped_div(link, r) {
+  wrapped_div(link, r, title, price) {
     var div = document.createElement('div');
-    div.innerHTML = `<a href=${link}>${r.outerHTML}</a>`;
+    div.innerHTML = `<a href=${link}>
+                      ${r.outerHTML}
+                    </a>
+                    ${title.outerHTML}
+                    ${price.outerHTML}
+                    `;
     return div;
   }
   async renderProductItem(t) {
     var e,
       r,
       s = await fetch(theme.urls.root + `/products/${t}?view=ajax-item`);
-    s.ok &&
-      ((e = await s.text()),
-       (r = theme.utils.parseHtml(e, ".product-media-container",
-                                     ['<span class="product__media-icon',
-                                      '<button'])),
-      this.fragment.prepend(this.wrapped_div(`/products/${t}`, r)));
+    if (s.ok) {
+      var e = await s.text();
+      var r = theme.utils.parseHtml(e, ".product-media-container",
+          ['<span class="product__media-icon',
+            '<button',
+            '--preview-ratio']);
+      var title = theme.utils.parseHtml(e, ".product__title");
+      var price = theme.utils.parseHtml(e, ".price");
+      this.fragment.prepend(this.wrapped_div(`/products/${t}`, r, title, price));
+    }
   }
   productsLoaded() {
     this.grid_container.prepend(this.fragment),

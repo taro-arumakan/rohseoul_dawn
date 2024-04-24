@@ -14,3 +14,23 @@
 [data-light-text=true] .recent-products--spinner {
   fill: var(--color--alternative)
 }
+
+/* theme--critical */
+[data-container=section] {
+  display: grid;
+  align-items: start;
+  grid-row-gap: var(--spacing--block);
+  padding-left: 4px;
+  padding-bottom: 10px;
+  /* background-color: white; */
+}
+
+[data-container=panel][data-mobile-columns="2"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid;
+}
+
+[data-container=panel][data-mobile-columns="4"] {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid;
+}
