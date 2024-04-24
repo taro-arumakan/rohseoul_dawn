@@ -15,10 +15,10 @@
   theme.libraries.vimeo = 'player.vimeo.com/api/player.js';
   theme.libraries.youtube = 'youtube.com/iframe_api';
 
-  theme.local_storage.age_verification = 'rohseoul:ageVerified';
-  theme.local_storage.collection_layout = 'rohseoul:collectionLayout';
-  theme.local_storage.recent_products = 'rohseoul:recentlyViewed';
-  theme.local_storage.search_layout = 'rohseoul:searchLayout';
+  theme.local_storage.age_verification = "leisure_of_memories:{{shop.name}}:ageVerified";
+  theme.local_storage.collection_layout = "leisure_of_memories:{{shop.name}}:collectionLayout";
+  theme.local_storage.recent_products = "leisure_of_memories:{{shop.name}}:recentlyViewed";
+  theme.local_storage.search_layout = "leisure_of_memories:{{shop.name}}:searchLayout";
 
   theme.settings.cart_type = '{{ settings.cart--type }}';
   theme.settings.money_format = {{ shop.money_format | json }};
