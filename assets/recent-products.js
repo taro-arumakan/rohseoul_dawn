@@ -15,14 +15,21 @@ class RecentProductsSection extends HTMLElement {
     var t = this.storage.map((t) => this.renderProductItem(t));
     Promise.allSettled(t).then(() => this.productsLoaded());
   }
+  wrapped_div(link, r) {
+    var div = document.createElement('div');
+    div.innerHTML = `<a href=${link}>${r.outerHTML}</a>`;
+    return div;
+  }
   async renderProductItem(t) {
     var e,
       r,
       s = await fetch(theme.urls.root + `/products/${t}?view=ajax-item`);
     s.ok &&
       ((e = await s.text()),
-      (r = theme.utils.parseHtml(e, ".product-media-container")),
-      this.fragment.prepend(r));
+       (r = theme.utils.parseHtml(e, ".product-media-container",
+                                     ['<span class="product__media-icon',
+                                      '<button'])),
+      this.fragment.prepend(this.wrapped_div(`/products/${t}`, r)));
   }
   productsLoaded() {
     this.grid_container.prepend(this.fragment),
